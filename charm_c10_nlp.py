@@ -1,9 +1,12 @@
 import torch
 import torch.nn as nn
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer
 import firebase_admin
 from firebase_admin import credentials, firestore
 import logging
+
+# Import classes and functions from model.py
+from inference.model import ModelArgs, Transformer
 
 # Setup Firebase
 cred = credentials.Certificate("firebase-config.json")  # Replace with your Firebase Admin SDK JSON
@@ -24,9 +27,14 @@ class CharmC10NLP(nn.Module):
     ):
         super(CharmC10NLP, self).__init__()
         
-        # Load Llama-2 model and tokenizer
-        self.model = AutoModelForCausalLM.from_pretrained(model_name)
+        # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        
+        # Initialize ModelArgs
+        self.args = ModelArgs()
+        
+        # Initialize Transformer model
+        self.model = Transformer(self.args)
         
         # Freeze the model if required
         if freeze_encoder:
