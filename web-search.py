@@ -88,13 +88,5 @@ def search():
         return jsonify({"error": "No relevant documents found."}), 404
 
 if __name__ == '__main__':
-    # Example: Insert your documents to Firebase (use your own content)
-    documents = [
-        "Your custom document content goes here.",
-        "Another example document for semantic search.",
-        "This is a test document for the AI search system."
-    ]
-    store_documents(documents)
-
     # Run Flask app for the AI search
     app.run(debug=True)
