@@ -13,7 +13,7 @@
     src="https://github.com/chatflare/Charm10/blob/main/assets/badge.svg?raw=true"/></a>
   <a href="https://chatflare.com/charm10"><img alt="Charm 10"
     src="https://img.shields.io/badge/⚡%20Charm%2010-Chatflare-ff4500?color=ff4500&logoColor=white"/></a>
-  <a href="https://huggingface.co/chatflare-ai"><img alt="Hugging Face"
+  <a href="https://huggingface.co/geminifan207"><img alt="Hugging Face"
     src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Chatflare%20AI-ffc107?color=ffc107&logoColor=white"/></a>
   <br>
   <a href="https://discord.gg/4U2j7W5Gf6"><img alt="Discord"
